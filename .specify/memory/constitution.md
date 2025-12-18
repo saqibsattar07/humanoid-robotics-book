@@ -1,55 +1,82 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+---
+Sync Impact Report:
 
-## Core Principles
+- Version change: 0.0.0 → 1.0.0
+- Modified principles: None (new constitution)
+- Added sections: All
+- Removed sections: None
+- Templates requiring updates:
+  - ✅ .specify/templates/plan-template.md (Checked, no updates needed)
+  - ✅ .specify/templates/spec-template.md (Checked, no updates needed)
+  - ✅ .specify/templates/tasks-template.md (Checked, no updates needed)
+- Follow-up TODOs:
+  - TODO(RATIFICATION_DATE): Set the initial ratification date for this constitution.
+---
+-->
+# Constitution for Integrated RAG Chatbot for a Docusaurus-Based AI Book
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+This document outlines the core principles, standards, and governance for the Integrated RAG Chatbot for a Docusaurus-Based AI Book project. All development and contributions must adhere to this constitution.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+**Ratification Date**: TODO(RATIFICATION_DATE): Set the initial ratification date for this constitution.
+**Last Amended**: 2025-12-17
+**Version**: 1.0.0
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+---
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+## I. Core Principles
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+These principles are the foundational, non-negotiable rules that guide the project's architecture, features, and user experience.
 
-### [PRINCIPLE_6_NAME]
+### Principle 1: Zero Hallucination
 
+**Description**:
+Answers must be grounded in book content. No external knowledge allowed during generation. Hallucination tolerance: 0%.
 
-[PRINCIPLE__DESCRIPTION]
+**Rationale**:
+To ensure the chatbot provides reliable and accurate information based solely on the provided textbook.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Principle 2: Transparency Through Citations
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+**Description**:
+All answers must reference retrieved book sections. Selected-text Q&A must restrict context strictly. Citations must always be present.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+**Rationale**:
+To allow users to verify the source of the information and build trust in the system.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Principle 3: Reproducibility and Traceability
 
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+**Description**:
+Chunk metadata must include source location.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+**Rationale**:
+To enable debugging, evaluation, and clear lineage of information from source to answer.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+### Principle 4: Clear Student-Facing Explanations
+
+**Description**:
+The chatbot should provide clear and concise explanations suitable for students.
+
+**Rationale**:
+To ensure the educational value of the chatbot and make complex topics understandable.
+
+---
+
+## II. Governance
+
+This section defines how the constitution is maintained and enforced.
+
+### Amendment Process
+
+Amendments require a proposal, review, and approval by the project lead.
+
+### Versioning Policy
+
+This constitution follows Semantic Versioning 2.0.0.
+- **MAJOR** version change for backward-incompatible governance changes.
+- **MINOR** version change for new principles or material expansions.
+- **PATCH** for clarifications and typo fixes.
+
+### Compliance Review
+
+Regular compliance reviews will be conducted to ensure adherence to these principles.
