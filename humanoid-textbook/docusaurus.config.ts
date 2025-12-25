@@ -50,7 +50,9 @@ const config: Config = {
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+            './src/css/custom.css',
+          ],
         },
       } satisfies Preset.Options,
     ],
